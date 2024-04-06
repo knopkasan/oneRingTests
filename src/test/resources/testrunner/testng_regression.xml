@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="One Ring Test Suite" thread-count="2"
+       parallel="tests" verbose="4">
+
+    <listeners>
+        <listener class-name="com.qa.onering.listeners.ExtentReportListener" />
+    </listeners>
+
+    <test name="One Ring Register Page Test_chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.qa.onering.tests.HomePageTest" />
+        </classes>
+    </test>
+    <test name="One Ring Login Page Test_chromium">
+        <parameter name="browser" value="chromium" />
+        <classes>
+            <class name="com.qa.onering.tests.LoginPageTest" />
+        </classes>
+    </test>
+
+</suite>
