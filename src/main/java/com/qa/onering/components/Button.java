@@ -2,15 +2,19 @@ package com.qa.onering.components;
 
 import com.microsoft.playwright.Page;
 
-import java.util.function.Function;
+//import java.util.function.Function;
 
 public class Button extends Element{
 
-    public static final Function<String, String> buildSelector =
-            (buttonText) -> String.format("button:has-text('%1$s')", buttonText);
+//    public static final Function<String, String> buildSelector =
+//            (buttonText) -> String.format("button:has-text('%1$s')", buttonText);
+
+//    public Button(Page page, String selector, boolean isIconButton) {
+//        super(page, buildSelector.apply(selector));
+//    }
 
     public Button(Page page, String selector) {
-        super(page, buildSelector.apply(selector));
+        super(page, selector);
     }
 
     public void click() {

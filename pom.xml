@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>POMPlaywright</artifactId>
+  <artifactId>oneRingTests</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -67,7 +67,7 @@
         <configuration>
           <forkCount>3</forkCount>
           <reuseForks>true</reuseForks>
-          <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+          <argLine>-Xmx1024m -XX:MaxMetaspaceSize=256m</argLine>
           <suiteXmlFiles>
             <suiteXmlFile>src/test/resources/testrunners/testng_regressions.xml</suiteXmlFile>
             <!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->

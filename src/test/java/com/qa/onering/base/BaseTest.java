@@ -2,7 +2,8 @@ package com.qa.onering.base;
 
 import com.microsoft.playwright.Page;
 import com.qa.onering.factory.PlaywrightFactory;
-import com.qa.onering.pages.ScenarionPage;
+import com.qa.onering.pages.HomePage;
+import com.qa.onering.pages.ScenarioPage;
 import com.qa.onering.pages.LoginPage;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -13,16 +14,18 @@ public class BaseTest {
     PlaywrightFactory pf;
     Page page;
     protected Properties prop;
-    protected ScenarionPage scenarioPage;
+    protected ScenarioPage scenarioPage;
     protected LoginPage loginPage;
+    protected HomePage homePage;
 
     @BeforeTest
     public void setup() {
         pf = new PlaywrightFactory();
         prop = pf.init_prop();
         page = pf.initBrowser(prop);
-        scenarioPage = new ScenarionPage(page);
+        scenarioPage = new ScenarioPage(page);
         loginPage = new LoginPage(page);
+        homePage = new HomePage(page);
     }
 
     @AfterTest

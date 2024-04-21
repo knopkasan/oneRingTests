@@ -6,15 +6,15 @@ import com.qa.onering.components.Input;
 
 public class LoginPage {
 
-    public Page page;
+    Page page;
 
     //1. String locator - OR
-    Input email;
-    Input password;
-    Button loginButton;
-    Button forgottenPasswordLink;
-    Button signUpLink;
-    Button logOut;
+    public Input email;
+    public Input password;
+    public Button loginButton;
+    public Button forgottenPasswordLink;
+    public Button signUpLink;
+    public Button logOut;
 
     //2. Constructor
     public LoginPage (Page page) {
@@ -24,7 +24,7 @@ public class LoginPage {
         password = new Input(page, "input[type='password']");
         forgottenPasswordLink = new Button(page, "//a[contains(text(),'Forgot your password?')]");
         signUpLink = new Button(page, "//a[contains(text(),'Sign up')]");
-        logOut = new Button(page, "//a[contains(text(),'Log Out')]");
+        logOut = new Button(page, "//button[contains(text(),'Log Out')]");
     }
 
     //3. Methods

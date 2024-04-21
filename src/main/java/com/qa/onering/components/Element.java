@@ -73,7 +73,7 @@ public class Element {
         Awaitility.await().atMost(duration).ignoreExceptions().until(condition);
     }
 
-    protected Locator getLocator() {
+    public Locator getLocator() {
         return page.locator(selector).first();
     }
 }
